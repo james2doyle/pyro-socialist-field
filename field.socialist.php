@@ -36,6 +36,10 @@ class Field_socialist
 		for ($i=0; $i < count($networks); $i++) {
 			// if a value is undefined then it was recently added and needs an empty string
 			$values[$i] = (isset($values[$i])) ? $values[$i]: '';
+			// the item has been recently removed so don't show it
+			if (strlen($networks[$i]) == 0) {
+				continue;
+			}
 			$template .= '<li><label for="'.$data['form_slug'].'">'.$networks[$i].'</label><div class="input"><input type="text" name="'.$data['form_slug'].'[]" value="'.$values[$i].'" id="'.$data['form_slug'].'"></div></li>';
 		}
 		return $template.'</ul>';
