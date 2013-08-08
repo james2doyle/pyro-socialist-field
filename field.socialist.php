@@ -62,6 +62,9 @@ class Field_socialist
 		if (is_array($data)) {
 			$template = '';
 			foreach ($data as $item) {
+				if (strlen($item) == 0) {
+					continue;
+				}
 				$template .= '<li class="streams_param_input"><label for="social_list">Network Name		</label><div class="input"><input type="text" name="social_list[]" value="'.$item.'">&nbsp;<a href="#" class="socialist_button">Add Another</a></div></li>';
 			}
 			return $template;
