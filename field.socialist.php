@@ -69,12 +69,12 @@ class Field_socialist
 				if (strlen($item) == 0) {
 					continue;
 				}
-				$template .= '<li class="streams_param_input"><label for="social_list">Network Name		</label><div class="input"><input type="text" name="social_list[]" value="'.$item.'">&nbsp;<a href="#" class="socialist_button">Add Another</a></div></li>';
+				$template .= '<li class="streams_param_input"><label for="social_list">'.lang('streams:socialist.social_list').'		</label><div class="input"><input type="text" name="social_list[]" value="'.$item.'">&nbsp;<a href="#" class="socialist_button">'.lang('streams:socialist.socialist_button').'</a></div></li>';
 			}
 			return $template;
 		} else {
 			// first run
-			return form_input('social_list[]', 'Network Name').'<a href="#" class="socialist_button">Add Another</a>';
+			return form_input('social_list[]', lang('streams:socialist.social_list')).'<a href="#" class="socialist_button">'.lang('streams:socialist.socialist_button').'</a>';
 		}
 	}
 
@@ -82,7 +82,7 @@ class Field_socialist
 	public function ajax_get_field()
 	{
 		// return an input component
-		echo '<li class="streams_param_input"><label for="social_list">Network Name		</label><div class="input"><input type="text" name="social_list[]" value="Network Name">&nbsp;<a href="#" class="socialist_button">Add Another</a></div></li>';
+		echo '<li class="streams_param_input"><label for="social_list">'.lang('streams:socialist.social_list').'		</label><div class="input"><input type="text" name="social_list[]" value="'.lang('streams:socialist.social_list').'">&nbsp;<a href="#" class="socialist_button">'.lang('streams:socialist.socialist_button').'</a></div></li>';
 	}
 
 	// --------------------------------------------------------------------------
