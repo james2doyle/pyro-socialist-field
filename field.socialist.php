@@ -49,7 +49,7 @@ class Field_socialist
 	{
 		// Check for empty list
 		// Don't serialze, use a flag for when we output later
-		return (empty($input[0])) ? 0 : serialize($input);
+		return empty($input[0]) ? 0 : serialize($input);
 	}
 
 	/**
